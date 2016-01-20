@@ -1,0 +1,129 @@
+//importing bootstrap
+@import (reference) "bootstrap/bootstrap.less";
+//impoting animation.less
+@import "animate.less-master/animate.less";
+
+//Font face for main page
+@font-face{
+    font-family: 'tacker';
+    src: url('../fonts/Lobster-Regular.ttf');
+}
+
+@font-face{
+    font-family: 'for_buttons';
+    src: url('../fonts/Pacifico.ttf');
+}
+
+
+//default variables
+@base-bg-color : #dd4b39;
+@base-color : #fff;
+
+
+//common CSS starts here
+body{
+    background-color: @base-bg-color;
+    background-image: url(../img/22.png); 
+}
+
+.base-font-color{
+    font-family: 'tacker';
+    color: @base-color;
+}
+
+//For a Row
+.wrapper{
+    .make-md-column-offset(2);
+    padding: 0px;   
+     .make-row(2);
+    }
+
+.section1{
+    padding-top: 8%;
+    //For First Row "Carry your message" - Starts
+    //Used mixins to simplify
+    .carry{
+        .base-font-color;
+        font-size: 100px;
+        text-align: center;
+        .make-lg-column(3);
+        .make-md-column(3);
+        .make-xs-column(12);
+        padding: 0px;
+        text-shadow: 0.8px 8px #212729;
+        .animated(0.4s,0.3s,both);
+        .bounceIn;
+    } 
+    .your{
+        .carry;
+        .animated(0.4s,0.6s,both);
+    }
+    .message{
+        .carry;
+        .animated(0.4s,0.9s,both);
+    }
+    //For First Row "Carry your Message" - Ends
+    
+    //through us
+    .sub-text{
+        .make-lg-column(12);
+        .make-md-column(12);
+        .make-xs-column(12);
+        padding: 0px;
+        text-align: center;
+        font-family: 'tacker';
+        font-size: 50px;
+        opacity: 0.1;
+        .animated(1s,1.5s,both);
+        .fadeInDown;
+    }   
+    
+    //button
+    .buttons{
+        .make-md-column-offset(2);
+        .make-lg-column(8);
+        .make-md-column(8);
+        .make-xs-column(12);
+        padding: 0px;    
+        margin-top: 30px;
+        font-family: 'for_buttons';
+        .animated(1s,2.5s,both);
+        .fadeInUp;
+        .button1{
+            text-decoration: none;
+            color: #fff;
+            .make-md-column-offset(1);
+            .make-lg-column(4);
+            .make-md-column(4);
+            .make-xs-column(12);
+            padding: 0px;
+            div{
+                width: 220px;
+                height: 40px;
+                background-color: #E67E22;
+                font-size: 20px;
+                padding: 10px 25px 8px 25px;
+                border-bottom: 5px solid #D35400;
+                text-align: center;   
+                display: table;
+                margin: 0 auto;
+                margin-top: 25px;
+            }
+            a{
+                text-decoration: none;
+                color: #fff;
+            }
+            a :active{
+                background-color: #D35400;
+            }
+        }
+        .button2{
+            .button1;
+            .make-md-column-offset(2);
+        }
+      }
+      .button_row{
+        .make-row(2);
+        }
+    
+}
